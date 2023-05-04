@@ -229,11 +229,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aluno\\source\\repos\\ControleTarefas\\ControleTarefas.API\\ControleTarefas.API.csproj",
+      "projectUniqueName": "C:\\Users\\Aluno\\Documents\\GitHub\\ControleTarefas\\ControleTarefas.API\\ControleTarefas.API.csproj",
       "projectName": "ControleTarefas.API",
-      "projectPath": "C:\\Users\\Aluno\\source\\repos\\ControleTarefas\\ControleTarefas.API\\ControleTarefas.API.csproj",
+      "projectPath": "C:\\Users\\Aluno\\Documents\\GitHub\\ControleTarefas\\ControleTarefas.API\\ControleTarefas.API.csproj",
       "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aluno\\source\\repos\\ControleTarefas\\ControleTarefas.API\\obj\\",
+      "outputPath": "C:\\Users\\Aluno\\Documents\\GitHub\\ControleTarefas\\ControleTarefas.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",

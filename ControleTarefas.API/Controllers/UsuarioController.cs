@@ -14,7 +14,7 @@ namespace ControleTarefas.API.Controllers
         {
             var usuario1 = new Usuario();
             usuario1.UsuarioId = 1;
-            usuario1.Login = "Yasnaya";
+            usuario1.Login = "Ciclano";
             usuario1.Senha = "mudarSenha";
 
             var usuario2 = new Usuario

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JEURFnY7C3KscSnqHXbeBYAHZ8hsIZlv1kH/rTHnTLI003neC58QAD0qep+rvyp59sJQVUJ6xU9StbQOxMKl0Q==",
+  "dgSpecHash": "ypPMgrCL/Khav4bvd5r0Wm1QtLxMXJpFW6xe+iaJYPW59JnOcNuEPkNJb6L+4rGYpBfRvIA7moQOUjgW46UgSA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Aluno\\source\\repos\\ControleTarefas\\ControleTarefas.API\\ControleTarefas.API.csproj",
+  "projectFilePath": "C:\\Users\\Aluno\\Documents\\GitHub\\ControleTarefas\\ControleTarefas.API\\ControleTarefas.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aluno\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Aluno\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
