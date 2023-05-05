@@ -1,4 +1,5 @@
-﻿using ControleTarefas.API.Models;
+﻿using ControleTarefas.API.Data.Map;
+using ControleTarefas.API.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace ControleTarefas.API.Data
