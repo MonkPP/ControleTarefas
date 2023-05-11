@@ -1,4 +1,5 @@
 ﻿using ControleTarefas.API.Models;
+using ControleTarefas.API.Repositorios.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ControleTarefas.API.Controllers
@@ -7,66 +8,50 @@ namespace ControleTarefas.API.Controllers
     [Route("[controller]")]
     public class UsuarioController : Controller
     {
+        private readonly IUsuarioRepositorio _usuarioRepositorio;
+
+        public UsuarioController(IUsuarioRepositorio usuarioRepositorio)
+        {
+            _usuarioRepositorio = usuarioRepositorio;
+        }
+
 
         [HttpGet]
-        public async Task<ActionResult<List<Usuario>>> GetUsuarios()
-
+        public async Task<ActionResult<List<Usuario>>> BuscarTodosUsuarios()
         {
-            var usuario1 = new Usuario();
-            usuario1.UsuarioId = 1;
-            usuario1.Login = "Ciclano";
-            usuario1.Senha = "teste234";
-
-            var usuario2 = new Usuario
-            {
-                UsuarioId = 2,
-                Login = "Fulano",
-                Senha = "Teste123"
-            };
-
-            var usuarios = new List<Usuario>();
-            usuarios.Add(usuario1);
-            usuarios.Add(usuario2);
-
+            List<Usuario> usuarios = await _usuarioRepositorio.BuscarTodosUsuarios();
             return Ok(usuarios);
         }
 
-
-
         [HttpGet("{id}")]
-        public async Task<ActionResult<Usuario>> GetUsuarioById(int id)
-
+        public async Task<ActionResult<Usuario>> BuscarPorId(int id)
         {
-            var usuario1 = new Usuario();
-            usuario1.UsuarioId = 1;
-            usuario1.Login = "Ciclano";
-            usuario1.Senha = "teste456";
-
-            var usuario2 = new Usuario
-            {
-                UsuarioId = 2,
-                Login = "Fulano",
-                Senha = "Teste123"
-            };
-
-            var usuarios = new List<Usuario>();
-            usuarios.Add(usuario1);
-            usuarios.Add(usuario2);
-
-            var usuarioSelecionado = usuarios.FirstOrDefault(x => x.UsuarioId == id);
-
-            return Ok(usuarioSelecionado);
-
-        }
-        [HttpPost]
-
-        public async Task<ActionResult<Usuario>> Cadastrar([FromBody] Usuario usuario)
-        {
-
-            usuario.Login = usuario.Login + "OK";
+            Usuario usuario = await _usuarioRepositorio.BuscarPorId(id);
             return Ok(usuario);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<Usuario>> Cadastrar([FromBody] Usuario usuarioModel)
+        {
+            Usuario usuario = await _usuarioRepositorio.Adicionar(usuarioModel);
+            return Ok(usuario);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<Usuario>> Cadastrar([FromBody] Usuario usuarioModel, int id)
+        {
+            usuarioModel.UsuarioId = id;
+            Usuario usuario = await _usuarioRepositorio.Atualizar(usuarioModel, id);
+            return Ok(usuario);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<bool>> Apagar(int id)
+        {
+            bool sucesso = await _usuarioRepositorio.Apagar(id);
+            return Ok(sucesso);
+        }
     }
-  }
 }
 
 
