@@ -15,7 +15,6 @@ namespace ControleTarefas.API.Controllers
             _usuarioRepositorio = usuarioRepositorio;
         }
 
-
         [HttpGet]
         public async Task<ActionResult<List<Usuario>>> BuscarTodosUsuarios()
         {
@@ -53,5 +52,3 @@ namespace ControleTarefas.API.Controllers
         }
     }
 }
-
-
