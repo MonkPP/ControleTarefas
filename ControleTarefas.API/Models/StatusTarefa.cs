@@ -11,6 +11,4 @@ namespace ControleTarefas.API.Models
         [Description("Concluída")]
         Concluida = 3
     }
-
-
 }
